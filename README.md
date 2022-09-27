@@ -18,3 +18,8 @@ Select all columns from pd.DataFrame `df` containing the substring `substr` in t
     with open(file_path, 'w') as f:
 		f.write(header)
     df.to_csv(file_path, header=False, mode="a")
+
+## Sort column col in pd.DataFrame df by chromosome
+
+	df[col] = pd.Categorical(df[col], ["chr1", "chr2", "chr3", "chr4", "chr5", "chr6", "chr7", "chr8", "chr9", "chr10", "chr11", "chr12", "chr13", "chr14", "chr15", "chr16", "chr17", "chr18", "chr19", "chr20", "chr21", "chr22", "chrX", "chrY"])
+	df = df.sort_values([col])

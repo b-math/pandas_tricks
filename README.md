@@ -45,3 +45,9 @@ Apply function "fun" on column "col" in pd.DataFrame "df", returning multiple va
 		return col, col+1
 		
 	df[[outcol1, outcol2]] = df.apply(lambda x: fun(x.col), axis=1, result_type='expand')
+	
+## Filter column with list
+
+Filter column "col" in pd.DataFrame "df" based on list "list".
+
+	df = df[df[col].isin(list)]

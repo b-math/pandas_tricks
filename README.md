@@ -46,6 +46,8 @@ Apply function "fun" on column "col" in pd.DataFrame "df", returning multiple va
 		
 	df[[outcol1, outcol2]] = df.apply(lambda x: fun(x.col), axis=1, result_type='expand')
 	
+	Hint: use x.name to select index as input to lambda
+	
 ## Filter column with list
 
 Filter column "col" in pd.DataFrame "df" based on list "list".

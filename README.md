@@ -37,6 +37,8 @@ Apply function "fun" to pd.DataFrame "df", by taking columns "col1" and "col2" a
 		
 	df[outcol] = df.apply(lambda x: fun(x.col1, x.col2), axis=1)
 
+Hint: use x.name to select index as input to lambda
+
 ## Apply function on pd.DataFrame returning multiple values in separate outcolumns
 
 Apply function "fun" on column "col" in pd.DataFrame "df", returning multiple values. These values are saved in a separate column each ("outcol1", "outcol2")
@@ -46,7 +48,7 @@ Apply function "fun" on column "col" in pd.DataFrame "df", returning multiple va
 		
 	df[[outcol1, outcol2]] = df.apply(lambda x: fun(x.col), axis=1, result_type='expand')
 	
-	Hint: use x.name to select index as input to lambda
+Hint: use x.name to select index as input to lambda
 	
 ## Filter column with list
 

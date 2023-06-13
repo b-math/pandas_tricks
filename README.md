@@ -13,6 +13,12 @@ Select all columns from pd.DataFrame `df` containing the substring `substr` in t
 
     df[[i for i in df.columns if "substr" in i]]
 
+## Drop all column having substring in column name
+
+Drop all columns from pd.DataFrame `df` containing the substring `substr` in the column name.
+
+    df.drop(list(df.filter(regex='substr')), axis=1, inplace=True)
+
 ## write custom header exporting pd.DataFrame
 
 write custom header "header" when exporting pd.DataFrame "df" into file "file_path".

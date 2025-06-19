@@ -60,9 +60,10 @@ Hint: use x.name to select index as input to lambda
 
 Filter column "col" in pd.DataFrame "df" based on list "list".
 
+	df = df[df[col].isin(list)]
 
+
+ 
 ## statistics on dataframes
 
 VS code extension "data wrangler"
-
-	df = df[df[col].isin(list)]
